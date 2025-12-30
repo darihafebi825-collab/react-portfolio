@@ -1,0 +1,20 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom right, #f5f5f5, #ffffff);
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.hero-content span {
+  color: #000;
+}

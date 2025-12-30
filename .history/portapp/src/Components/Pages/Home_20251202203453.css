@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Helvetica:wght@400;700&display=swap');
+
+.home-container {
+  width: 100%;
+  min-height: 100vh;
+  background: #f9f9f9; /* light Swiss white shade */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  font-family: 'Helvetica', sans-serif;
+  overflow: hidden;
+  padding: 50px 20px;
+}
+
+/* Large black-and-white check-note style blob */
+.note-blob-container {
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 400px;
+  height: 400px;
+}
+
+.note-blob {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(145deg, #fff, #eaeaea); /* soft black/white shade */
+  border-radius: 20% 15% 25% 20% / 15% 20% 25% 15%; /* irregular, soft shape */
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08), inset 0 -5px 10px rgba(0,0,0,0.02);
+  position: relative;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: flex-start;
+  transform: rotate(-5deg);
+  transition: transform 0.4s ease;
+}
+
+/* subtle floating React icons or code snippets on blob */
+.note-blob span {
+  font-size: 14px;
+  font-weight: 700;
+  color: rgba(97, 218, 251, 0.2); /* subtle React-blue shade */
+  margin: 5px;
+  animation: float 6s infinite alternate;
+}
+
+@keyframes float {
+  0% { transform: translate(0px, 0px) rotate(0deg); }
+  50% { transform: translate(5px, -5px) rotate(5deg); }
+  100% { transform: translate(-5px, 5px) rotate(-5deg); }
+}
+
+/* Hover effect */
+.note-blob-container:hover .note-blob {
+  transform: rotate(0deg) scale(1.05);
+}
+
+/* Profile Image */
+.home-pic {
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* Text Content */
+.home-text {
+  max-width: 500px;
+}
+
+.home-text h1 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 20px;
+}
+
+.home-text p {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.highlight {
+  color: #61dafb;
+  font-weight: 700;
+}
+
+/* CTA */
+.cta {
+  margin-top: 40px;
+  cursor: pointer;
+  display: inline-block;
+  background: linear-gradient(90deg, #61dafb, #00c8ff);
+  padding: 12px 25px;
+  border-radius: 50px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.cta-text {
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+}
+

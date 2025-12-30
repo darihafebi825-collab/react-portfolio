@@ -1,0 +1,64 @@
+.home-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #eef2f3;
+  font-family: Arial, sans-serif;
+}
+
+.home-title {
+  font-size: 45px;
+  font-weight: bold;
+  color: #222;
+}
+
+.home-subtitle {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.home-box {
+  width: 380px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+  text-align: center;
+}
+
+.home-description {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.file-input {
+  width: 100%;
+  margin: 15px 0;
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+}
+
+.home-btn {
+  padding: 12px 25px;
+  font-size: 16px;
+  background: #0a74da;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.home-btn:hover {
+  background: #055ec4;
+}
+
+.file-name {
+  margin-top: 10px;
+  color: green;
+  font-size: 14px;
+}

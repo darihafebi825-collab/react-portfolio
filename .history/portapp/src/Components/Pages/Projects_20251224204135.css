@@ -1,0 +1,123 @@
+/* Carousel wrapper */
+.arc-gallery-wrapper {
+  perspective: 1500px;
+  width: 100%;
+  min-height: 100vh;
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+
+/* Carousel container */
+.arc-gallery {
+  position: relative;
+  width: 900px;
+  height: auto;
+  min-height: 600px;
+  transform-style: preserve-3d;
+}
+
+/* Each card */
+.arc-card {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform-style: preserve-3d;
+  width: 260px;           /* increased width */
+  height: 400px;          /* increased height */
+  padding-top: 140px;     /* for image/emoji */
+  padding-bottom: 25px;   /* for buttons */
+  background: #f6f6f6;    /* light gray card */
+  border-radius: 20px;
+  border: 2px solid #f0f0f0;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1), -5px -5px 15px rgba(255,255,255,0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.arc-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15), -10px -10px 20px rgba(255,255,255,0.5);
+}
+
+/* Emoji / image */
+.arc-card img,
+.arc-card .emoji {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  z-index: 2;
+}
+
+/* Card content */
+.info {
+  text-align: center;
+  padding: 10px 15px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Project title */
+.info h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+/* Description */
+.info p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+/* Tech stack */
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.tech-stack span {
+  font-size: 0.75rem;
+  background: #ffd633;
+  color: #333;
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: auto;
+}
+
+button.preview {
+  background: #ffd633;
+  color: #333;
+}
+
+button.download {
+  background: #fff;
+  border: 2px solid #ffd633;
+  color: #ffd633;
+}
+

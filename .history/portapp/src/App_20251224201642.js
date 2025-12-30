@@ -1,0 +1,17 @@
+import React from "react";
+import Home from "./Components/Pages/Home";
+import Abo from "./Components/Pages/Abo";
+import Exp from "./Components/Pages/Exp";
+import Exp from "./Components/Pages/Exp";
+function App() {
+  return (
+    <div className="App">
+      <Home />
+ <Abo />
+    <Exp />   
+    </div>
+  );
+}
+
+export default App;
+

@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Helvetica:wght@400;700&display=swap');
+
+.home-container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffffff, #f7f7f7); /* shades of white */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  font-family: 'Helvetica', sans-serif;
+  overflow: hidden;
+  padding: 50px 20px;
+}
+
+.blob-container {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+}
+
+.blob {
+  width: 250px;
+  height: 250px;
+  background: #e0f7ff; /* soft white-blue */
+  border-radius: 50% 40% 60% 50%;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.05));
+  position: relative;
+}
+
+.react-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 36px;
+  color: #61dafb;
+}
+
+.home-pic {
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.home-text {
+  max-width: 500px;
+}
+
+.home-text h1 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 20px;
+}
+
+.home-text p {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.highlight {
+  color: #61dafb;
+  font-weight: 700;
+}
+
+.cta {
+  margin-top: 40px;
+  cursor: pointer;
+  display: inline-block;
+  background: linear-gradient(90deg, #61dafb, #00c8ff);
+  padding: 12px 25px;
+  border-radius: 50px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.cta-text {
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+}

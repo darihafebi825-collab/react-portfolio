@@ -1,0 +1,279 @@
+.arc-gallery-wrapper {
+  perspective: 1500px;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  height: auto;
+  
+  background: linear-gradient(135deg, #ffffff, #ffffff);
+  background-size: 200% 100%; /* make background bigger than container */
+  background-position: right; /* push gradient to right */
+}
+
+
+.arc-gallery {
+  position: relative;
+  transform-style: preserve-3d;
+  width: 500px;
+  min-height: 650px;  /* FIX */
+  height: auto;      /* was 300px — too small */
+  transform: none;     /* remove translateY(80px) to bring it UP */
+  transition: transform 0.3s ease;
+}
+
+
+.arc-card {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform-style: preserve-3d;
+
+  width: 650px;
+  height: 250px;     /* was 380px → increase so buttons become visible */
+  background: #fff;
+  border: 3px solid #ffffff;
+  transform-origin: center center;
+  box-shadow: 0 10px 20px rgba(2,2,2,0.9);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+
+  padding-top: 200px;  /* space for image */
+  padding-bottom: 30px; /* extra space for buttons */
+  padding-left: 0;
+
+  overflow: hidden;
+  width: 220px;
+  height: 360px;       /* reduced */
+  padding-top: 120px;  /* reduced */
+  padding-bottom: 20px;
+}
+
+
+
+.arc-card video {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.info {
+  padding: 12px;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 25px; /* even gap between buttons */
+  margin-top: 12px;
+}
+
+button {
+  padding: 8px 14px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.preview {
+  background:  #f6b400;;
+  color: #333333;
+}
+
+.download {
+  background: #fff;
+  border: 2px solid  #f6b400;;
+  color:  #f6b400;;
+}
+
+.preview:hover,
+.download:hover {
+  transform: scale(1.05);
+}
+
+.arc-gallery-wrapper {
+  perspective: 1500px;
+  width: 100%;
+  height: 400vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+
+/* Left-side info container with right accent */
+.projects-info {
+  position: relative;
+  flex: 0 0 280px;
+  padding: 2rem 2rem 2rem 1.5rem;
+  color: #333333;
+  background: #ffffff;
+  border-radius: 12px; /* smooth edges */
+  border-right: 5px solid  #f6b400;; /* yellow vertical line on right */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.395); /* subtle shadow */
+}
+
+/* Heading */
+.projects-info h1 {
+  font-size: 2rem;
+  color:  #f6b400;; /* yellow heading */
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Paragraph */
+.projects-info p {
+  font-size: 1rem;
+  color: #333333; /* readable dark text */
+  line-height: 1.6;
+}
+
+
+
+/* Right-side carousel wrapper */
+.arc-gallery-wrapper {
+  perspective: 1500px;
+  width: 100%;
+  height: auto;        /* FIX */
+  min-height: 100vh;   /* FIX */
+  overflow: visible;   /* FIX */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+
+/* Optional: make carousel responsive */
+@media (max-width: 1024px) {
+  .arc-gallery-page {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .projects-info {
+    flex: none;
+    width: 100%;
+    text-align: center;
+    padding-left: 0;
+    margin-bottom: 2rem;
+  }
+
+  .arc-gallery-wrapper {
+    width: 100%;
+  }
+}
+.arc-gallery-page {
+  position: relative;
+  display: flex;
+  min-height: 80vh;
+  padding: 2rem 2rem;
+  background: linear-gradient(120deg, #ffffff, #ffffff);
+  gap: 2rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: visible;      /* FIX */
+  transform: none;        /* FIX */
+}
+
+/* 3D glowing background effect */
+.arc-gallery-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #ffffff;
+  
+  filter: blur(80px);
+  transform: translateZ(-100px) scale(1.2);
+  z-index: 0;
+}
+
+/* subtle moving gradient to simulate depth */
+.arc-gallery-page::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #fff9d0 0%, #ffffff 100%);
+  opacity: 0.6;
+  mix-blend-mode: overlay;
+  animation: move3dbg 8s ease-in-out infinite alternate;
+  z-index: 0;
+}
+
+@keyframes move3dbg {
+  from {
+    transform: translate3d(-30px, -20px, -100px) rotateX(5deg);
+  }
+  to {
+    transform: translate3d(30px, 20px, -100px) rotateY(5deg);
+  }
+}
+
+/* Keep content above background */
+
+.arc-gallery-page::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  background: #d32101; /* yellow line */
+  z-index: 3;
+} 
+.arc-card img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  z-index: 2;
+}
+
+.arc-card {
+  width: 220px;
+  height: 260px;        /* COMPACT HEIGHT */
+  padding-top: 80px;    /* space for image */
+  padding-bottom: 15px; /* space for buttons */
+}
+
+.arc-gallery {
+  width: 800px;
+  height: auto;
+  min-height: 502px;    /* equal to card height */
+}
+
+
+.projects-info {
+  position: relative;
+  flex: 0 0 280px;
+  padding: 2rem 2rem 2rem 1.5rem;
+  color: #333333;
+  background: #ffffff;
+  border-radius: 12px; /* smooth edges */
+  border-right: 5px solid  #f6b400;; /* yellow vertical line on right */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.726); /* subtle shadow */
+  
+  transform: translateY(-90px); /* Move up 50px */
+}
+
+.info {
+  text-align: center;
+  padding: 8px 10px;
+  flex-grow: 1;     /* pushes buttons down evenly */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
