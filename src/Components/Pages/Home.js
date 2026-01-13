@@ -1,151 +1,66 @@
-import React, { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { Send, ChevronRight } from "lucide-react";
+import React from 'react';
+import { ArrowDown, ArrowRight } from 'lucide-react';
 
-
-
-
-const Home = () => {
-  const ref = useRef(null);
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
-
-  const y = useTransform(scrollYProgress, [0, 1], [0, 200]);
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
-
+export default function Home() {
   return (
-    <section
-      ref={ref}
-      id="home"
-      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 via-white to-gray-100 relative overflow-hidden pt-16"
-    >
-      <div className="absolute inset-0 bg-grid-pattern opacity-5" />
-
-      {[...Array(20)].map((_, i) => (
-        <motion.div
-          key={i}
-          className="absolute rounded-full bg-gray-900/5"
-          style={{
-            width: Math.random() * 300 + 50,
-            height: Math.random() * 300 + 50,
-            left: `${Math.random() * 100}%`,
-            top: `${Math.random() * 100}%`,
-          }}
-          animate={{
-            y: [0, Math.random() * 50 - 25],
-            x: [0, Math.random() * 50 - 25],
-            scale: [1, 1.1, 1],
-          }}
-          transition={{
-            duration: Math.random() * 10 + 10,
-            repeat: Infinity,
-            repeatType: "reverse",
-          }}
-        />
-      ))}
-
-      <motion.div
-        style={{ y, opacity }}
-        className="relative z-10 text-center px-6 max-w-5xl mx-auto"
-      >
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-        >
-          <div className="mb-6">
-            <div className="w-32 h-32 mx-auto rounded-full overflow-hidden shadow-xl">
- <div className="w-32 h-32 mx-auto bg-gray-800 rounded-full flex items-center justify-center overflow-hidden shadow-xl">
-  <img
-    src="/Images/dari.png"
-    alt="Profile"
-    className="w-full h-full object-cover"
-  />
-</div>
-
-
-
-
-
-
+    <div className="min-h-screen bg-white text-gray-900 flex items-center justify-center px-6">
+      <div className="max-w-7xl w-full">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          {/* Left content - SAME as yours */}
+          <div className="space-y-8">
+            
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-none">
+              Dariha
+              <br />
+              <span className="text-gray-900">Suresh</span>
+            </h1>
+            <div className="text-xl md:text-3xl text-gray-700 font-light">
+              Full Stack Developer
+            </div>
+            <p className="text-lg md:text-xl text-gray-600 max-w-2xl leading-relaxed">
+              Crafting seamless digital experiences from front to back. 
+              Passionate about building scalable applications with clean code 
+              and innovative solutions.
+            </p>
+            <div className="flex flex-wrap gap-6 pt-4">
+              <button 
+                onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
+                className="bg-gray-900 text-white px-8 py-4 text-lg hover:bg-gray-800 transition-colors inline-flex items-center gap-2 font-semibold"
+              >
+                View My Projects
+                <ArrowRight size={20} />
+              </button>
+              <button 
+                onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+                className="border-2 border-gray-900 text-gray-900 px-8 py-4 text-lg hover:bg-gray-900 hover:text-white transition-colors inline-flex items-center gap-2 font-semibold"
+              >
+                Get Connected
+                <ArrowRight size={20} />
+              </button>
             </div>
           </div>
-
-          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-4">
-            Hi, I'm{" "}
-            <span className="bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 bg-clip-text text-transparent">
-              Dariha Suresh
-            </span>
-          </h1>
-
-          <div className="flex flex-wrap justify-center gap-3 mb-6">
-            {[
-              "Full Stack Developer",
-              "Machine Learning Engineer",
-              "Problem Solver",
-            ].map((role, idx) => (
-              <motion.span
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 + idx * 0.1 }}
-                className="px-4 py-2 bg-white shadow-md rounded-full text-sm font-medium text-gray-700"
-              >
-                {role}
-              </motion.span>
-            ))}
+          
+          {/* Right Side - Image with DEBUG */}
+          <div className="flex items-center justify-center">
+            <div className="relative w-full max-w-lg">
+              <img 
+                src="/Images/dari.png"
+                alt="Dariha Suresh"
+                className="w-full h-auto object-contain border-4 border-red-500" // RED BORDER FOR DEBUG
+                onError={(e) => {
+                  console.log('❌ IMAGE FAILED:', e.target.src);
+                  e.target.style.display = 'none';
+                }}
+                onLoad={() => console.log('✅ IMAGE LOADED!')}
+              />
+            </div>
           </div>
-
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
-            className="text-xl text-gray-600 max-w-3xl mx-auto mb-8 leading-relaxed"
-          >
-            Passionate about creating elegant solutions to complex problems.
-            Specialized in building scalable web applications with modern
-            technologies and beautiful user experiences.
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7 }}
-            className="flex flex-wrap justify-center gap-4"
-          >
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() =>
-                document
-                  .getElementById("contact")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
-              className="px-8 py-4 bg-gray-900 text-white rounded-full font-semibold shadow-lg flex items-center gap-2"
-            >
-              Let's Connect <Send size={18} />
-            </motion.button>
-
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() =>
-                document
-                  .getElementById("projects")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
-              className="px-8 py-4 bg-white text-gray-900 rounded-full font-semibold shadow-lg border-2 border-gray-200 flex items-center gap-2"
-            >
-              View Projects <ChevronRight size={18} />
-            </motion.button>
-          </motion.div>
-        </motion.div>
-      </motion.div>
-    </section>
+        </div>
+        
+        <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <ArrowDown size={32} className="text-gray-500" />
+        </div>
+      </div>
+    </div>
   );
-};
-
-export default Home;
+}

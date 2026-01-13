@@ -9,7 +9,6 @@ const education = [
     place: "Victory Matric Higher Secondary School",
     period: "2020 – 2021",
     score: "CGPA: 86%",
-    image: "/Images/vic.png",
   },
   {
     year: "2025",
@@ -17,7 +16,6 @@ const education = [
     place: "Arunachala College of Engineering for Women, Anna University",
     period: "2021 – 2025",
     score: "CGPA: 80.90%",
-    image: "/Images/aru.png",
   },
   {
     year: "2025",
@@ -25,7 +23,6 @@ const education = [
     place: "Alagappa University",
     period: "2022 – 2025",
     score: "CGPA: 67.8%",
-    image: "/Images/alagappa.png",
   },
 ];
 
@@ -72,13 +69,9 @@ const EducationTimeline = () => {
                 transition={{ delay: idx * 0.2 }}
                 className="flex flex-col items-center w-full sm:w-64 md:w-72"
               >
-                {/* Image Orb */}
-                <div className="w-20 h-20 rounded-full bg-white/60 backdrop-blur-xl border-2 border-white/40 shadow-[0_0_40px_rgba(0,0,0,0.3)] overflow-hidden flex items-center justify-center">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover"
-                  />
+                {/* Icon Orb */}
+                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-blue-400 to-purple-500 backdrop-blur-xl border-2 border-white/40 shadow-[0_0_40px_rgba(0,0,0,0.3)] flex items-center justify-center">
+                  <GraduationCap size={32} className="text-white" />
                 </div>
 
                 {/* Year */}
@@ -110,4 +103,3 @@ const EducationTimeline = () => {
 };
 
 export default EducationTimeline;
-

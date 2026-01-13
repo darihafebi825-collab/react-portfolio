@@ -23,7 +23,7 @@ const experiences = [
 
 const Exp = () => {
   return (
-    <section id="experience" className="min-h-screen bg-[#eef1f5] py-16 px-6 relative overflow-hidden">
+    <section id="experience" className="min-h-screen bg-white py-16 px-6 relative overflow-hidden">
       <div className="max-w-4xl mx-auto relative z-10">
 
         {/* BIG TITLE WITH NEUMORPHIC ICON */}
@@ -32,20 +32,20 @@ const Exp = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-12 px-10 py-5 flex items-center justify-between rounded-2xl bg-[#eef1f5]"
+          className="mb-12 px-10 py-5 flex items-center justify-between rounded-2xl bg-white"
           style={{
             boxShadow:
-              "18px 18px 36px #cfd3d8, -18px -18px 36px #ffffff",
+              "18px 18px 36px #e5e7eb, -18px -18px 36px #ffffff",
           }}
         >
-          <h2 className="text-5xl md:text-6xl font-extrabold text-gray-800">
+          <h2 className="text-5xl md:text-6xl font-extrabold text-gray-900">
             Experience
           </h2>
 
           <motion.div
-            className="p-4 rounded-full bg-[#eef1f5] shadow-[18px_18px_36px_#cfd3d8,-18px_-18px_36px_#ffffff]"
+            className="p-4 rounded-full bg-white shadow-[18px_18px_36px_#e5e7eb,-18px_-18px_36px_#ffffff]"
           >
-            <Briefcase size={40} className="text-gray-700" />
+            <Briefcase size={40} className="text-gray-800" />
           </motion.div>
         </motion.div>
 
@@ -73,9 +73,9 @@ const Exp = () => {
               <motion.span
                 className="
                   absolute left-1/2 top-5 w-5 h-5
-                  bg-[#eef1f5]
+                  bg-white
                   rounded-full
-                  shadow-[inset_6px_6px_12px_#cfd3d8,inset_-6px_-6px_12px_#ffffff]
+                  shadow-[inset_6px_6px_12px_#e5e7eb,inset_-6px_-6px_12px_#ffffff]
                   -translate-x-1/2
                 "
                 animate={{ y: [0, -5, 0] }}
@@ -86,13 +86,13 @@ const Exp = () => {
               <motion.div
                 animate={{
                   boxShadow:
-                    "inset 8px 8px 16px #cfd3d8, inset -8px -8px 16px #ffffff, inset 2px 2px 6px rgba(0,0,0,0.1), inset -2px -2px 6px rgba(255,255,255,0.5)",
+                    "inset 8px 8px 16px #e5e7eb, inset -8px -8px 16px #ffffff, inset 2px 2px 6px rgba(0,0,0,0.1), inset -2px -2px 6px rgba(255,255,255,0.5)",
                   y: [0, -3, 0],
                 }}
                 transition={{ repeat: Infinity, duration: 3, delay: idx * 0.2 }}
                 className="
                   w-full sm:w-[45%]
-                  bg-[#eef1f5] px-5 py-3 rounded-2xl
+                  bg-white px-5 py-3 rounded-2xl
                   cursor-default
                   transition-all duration-200
                 "
@@ -101,12 +101,12 @@ const Exp = () => {
                   {exp.period}
                 </span>
 
-                <h3 className="text-lg font-bold text-gray-800 mt-1">
+                <h3 className="text-lg font-bold text-gray-900 mt-1">
                   {exp.title}
                 </h3>
 
                 <p className="flex items-center gap-1 text-sm text-gray-500 mt-1">
-                  <MapPin size={14} />
+                  <MapPin size={14} className="text-gray-500" />
                   {exp.company}
                 </p>
               </motion.div>
@@ -125,9 +125,9 @@ const Exp = () => {
             <motion.span
               className="
                 absolute left-1/2 -top-3 w-5 h-5
-                bg-[#eef1f5]
+                bg-white
                 rounded-full
-                shadow-[inset_6px_6px_12px_#cfd3d8,inset_-6px_-6px_12px_#ffffff]
+                shadow-[inset_6px_6px_12px_#e5e7eb,inset_-6px_-6px_12px_#ffffff]
                 -translate-x-1/2
               "
               animate={{ y: [0, -4, 0] }}
@@ -143,12 +143,12 @@ const Exp = () => {
                 px-8 py-2
                 border-2 border-dashed border-gray-400
                 rounded-2xl
-                bg-[#eef1f5]
-                shadow-[18px_18px_36px_#cfd3d8,-18px_-18px_36px_#ffffff, 2px_2px_6px_rgba(0,0,0,0.1), -2px_-2px_6px_rgba(255,255,255,0.5)]
+                bg-white
+                shadow-[18px_18px_36px_#e5e7eb,-18px_-18px_36px_#ffffff, 2px_2px_6px_rgba(0,0,0,0.1), -2px_-2px_6px_rgba(255,255,255,0.5)]
                 transform origin-bottom-right
               "
             >
-              <span className="text-sm md:text-base uppercase tracking-widest font-bold text-gray-700">
+              <span className="text-sm md:text-base uppercase tracking-widest font-bold text-gray-800">
                 Adventure Awaits
               </span>
             </motion.div>
