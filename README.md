@@ -1,70 +1,141 @@
-# Getting Started with Create React App
+# 🌐 Dariha A — React + Tailwind Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, fast, and responsive personal portfolio built with **React.js** and **Tailwind CSS** to showcase my skills, projects, and professional experience.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Live Demo
+https://darihafebi825-collab.github.io/react-portfolio/
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📌 About
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This is my personal portfolio website created using **React** and **Tailwind CSS**.  
+It highlights my profile, skills, experience, and projects with a clean and minimal UI.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠 Tech Stack
 
-### `npm run build`
+- React.js  
+- Tailwind CSS  
+- JavaScript (ES6)  
+- HTML5  
+- PostCSS  
+- GitHub Pages  
+- Git & GitHub  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📁 Project Structure
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```text
+portapp/
+├── public/
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── logo192.png
+│   ├── logo512.png
+│   ├── manifest.json
+│   └── robots.txt
+│
+├── src/
+│   ├── Components/
+│   │   └── Pages/
+│   │       ├── Home.js
+│   │       ├── Abo.js
+│   │       ├── Edu.js
+│   │       ├── Exp.js
+│   │       ├── Proj.js
+│   │       ├── Skil.js
+│   │       └── Cont.js
+│   │
+│   ├── App.js
+│   ├── App.css
+│   ├── index.js
+│   └── index.css
+│
+├── postcss.config.js
+├── tailwind.config.js
+├── package.json
+└── README.md
+```
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## ✨ Features
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Fully responsive design  
+- Tailwind CSS styling  
+- React component-based architecture  
+- Fast loading with optimized build  
+- GitHub Pages deployment  
+- Clean UI and smooth navigation  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## ⚙️ Installation
 
-## Learn More
+```bash
+git clone https://github.com/darihafebi825-collab/Portfolio.git
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Navigate to project folder:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+cd portapp
+```
 
-### Code Splitting
+Install dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm install
+```
 
-### Analyzing the Bundle Size
+Run locally:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+npm start
+```
 
-### Making a Progressive Web App
+Open in browser:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```
+http://localhost:3000
+```
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🚀 Deployment (GitHub Pages)
 
-### Deployment
+```bash
+npm run build
+npm run deploy
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 👩‍💻 Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Dariha A**  
+AI Product Developer  
+
+ 
+- **GitHub:** https://github.com/darihafebi825-collab  
+- **LinkedIn:** https://www.linkedin.com/in/dariha-suresh-262a933a0  
+
+---
+
+## 📜 License
+
+```text
+MIT License
+
+Copyright (c) 2026 Dariha A
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files to deal in the Software
+without restriction.
+```
+
